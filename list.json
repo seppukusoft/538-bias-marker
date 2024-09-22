@@ -2,8 +2,8 @@
 {
     "red":["RMG Research", "Napolitan Institute", "TIPP Insights", "American Greatness"],
     "leanred":["The Hill", "Fox News"],
-    "blue":["fewffewg"],
-    "leanblue":["Morning Consult"],
-    "unreliable":["ActiVote"]
+    "blue":["test"],
+    "leanblue":["Morning Consult", "Outward Intelligence"],
+    "unreliable":["ActiVote", "Victory Insights", "Public Policy Polling"]
 }
 ]
