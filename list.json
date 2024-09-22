@@ -1,9 +1,9 @@
 [
 {
     "red":["RMG Research", "Napolitan Institute", "TIPP Insights", "American Greatness"],
-    "lean-red":["fekfenje"],
+    "leanred":["fekfenje"],
     "blue":["eofenje"],
-    "lean-blue":["Morning Consult"],
+    "leanblue":["Morning Consult"],
     "unreliable":["ActiVote"]
 }
 ]
