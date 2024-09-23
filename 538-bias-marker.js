@@ -97,7 +97,8 @@ window.onload = function() {
                         const textContent = el.textContent || '';
                         return !/\d/.test(textContent);  // Keep elements without numbers in their text
                     });
-                    const top50Pollsters = filteredElements.slice(0, 50).map(el => el.textContent);
+                    let top50Pollsters = filteredElements.slice(0, 50).map(el => el.textContent);
+                    top50Pollsters = top50Pollsters.concat(relMissingPollsters);
                     const markedPollsters = new Set();
                     const markedSponsors = new Set();
                     // checks pollsters
