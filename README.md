@@ -43,5 +43,10 @@ Clear any existing text in the new script, then copy the code of the userscript 
 
 **Dark Red:** Partisan Republican pollster. Results often favor the Republican Party and its candidates; pollsters are often unreliable.
 
-# 
+# Example
+
+![image](https://github.com/user-attachments/assets/f8934bf7-9445-4eee-b640-cc71ca32552b)
+
+
+# Disclaimer
 The script developer determines partisan leanings and reliability through independent research and assumes no responsibility for incorrect or outdated information.
