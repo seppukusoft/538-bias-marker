@@ -1,7 +1,7 @@
 [
 {
     "red":["RMG Research", "Napolitan Institute", "TIPP Insights", "American Greatness"],
-    "leanred":["The Hill", "Fox News"],
+    "leanred":["The Hill", "Fox News", "DailyMail.com", "J.L. Partners", "HarrisX", "HarrisX/Harris Poll"],
     "blue":["test"],
     "leanblue":["Morning Consult", "Outward Intelligence"],
     "unreliable":["ActiVote", "Victory Insights", "Public Policy Polling"]
