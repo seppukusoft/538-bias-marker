@@ -10,7 +10,6 @@ window.onload = function() {
     // Create a new <style> element
     const style = document.createElement('style');
 
-    // Define the CSS rules for smaller and lighter squares
     style.innerHTML = `
     .partisan.red {
         display: inline-block;
@@ -210,8 +209,8 @@ window.onload = function() {
                 if (currentTime - lastRunTime > 1500) {
                     lastRunTime = currentTime; // Update the last run time
                     setTimeout(() => {
-                        addMarkers(); // Call addMarkers after a short delay for new inputs
-                    }, 1000); // Delay for 1 second (adjust as needed)
+                        addMarkers(); 
+                    }, 1000); 
                 }
             });
         }
