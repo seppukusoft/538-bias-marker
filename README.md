@@ -3,6 +3,19 @@ Adds additional bias/reliability markers to 538's polling tables. Shows bias of 
 
 The bias and reliability ratings of pollsters are grabbed on the fly, meaning there is no need to update the script for the latest ratings.
 
+# Setup
+**Step 1:** Download a userscript manager extension if you do not have one already (recommended: [Violentmonkey](https://violentmonkey.github.io/get-it/)).
+
+**Step 2:** Open the extension and click on "Create a new script".
+
+![image](https://github.com/user-attachments/assets/27e35ef9-a678-42c6-8ca3-afe0f099c621)
+
+Clear any existing text in the new script, then copy the code of the userscript from [here](https://github.com/seppukusoft/538-bias-marker/blob/main/538-bias-marker.js) and paste it into the new script.
+
+**Step 3:** Click "Save and close" in the top right corner to complete the setup. The script will automatically run whenever you next visit a 538 polling page.
+
+![image](https://github.com/user-attachments/assets/7c485723-5ee6-41d9-8bf1-05502a9e021c)
+
 # Legend
 **All added markers have a black border to distinguish them from 538's own.**
 
@@ -29,6 +42,6 @@ The bias and reliability ratings of pollsters are grabbed on the fly, meaning th
 ![image](https://github.com/user-attachments/assets/0ef26276-3c73-4c2e-9ef2-453b869819dc)
 
 **Dark Red:** Partisan Republican pollster. Results often favor the Republican Party and its candidates; pollsters are often unreliable.
-# 
 
+# 
 The script developer determines partisan leanings and reliability through independent research and assumes no responsibility for incorrect or outdated information.
