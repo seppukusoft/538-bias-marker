@@ -2,6 +2,7 @@
 // @name        538 Political Markers
 // @match       *://projects.fivethirtyeight.com/*
 // @version     1.0
+// @updateURL   https://github.com/seppukusoft/538-bias-marker/raw/refs/heads/main/538-bias-marker.js
 // @author      seppukusoft
 // @description Displays the political leaning of polls featured on 538 where not provided.
 // ==/UserScript==
