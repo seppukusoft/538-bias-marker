@@ -82,7 +82,8 @@ window.onload = function() {
             let leanRedPollsters = firstObject.leanred;
             let leanBluePollsters = firstObject.leanblue;
             let unreliablePollsters = firstObject.unreliable;
-
+            let relMissingPollsters = firstObject.relmissing;
+            
             let pollsterArray = document.getElementsByClassName("pollster-name");
             let sponsorArray = document.getElementsByClassName("sponsor");
 
