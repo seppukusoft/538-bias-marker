@@ -5,6 +5,6 @@
     "blue":["Civiqs", "Navigator Research", "Change Research"],
     "leanblue":["Morning Consult", "Outward Intelligence", "USA Today"],
     "unreliable":["ActiVote", "Victory Insights", "Public Policy Polling", "Capitol Weekly", "Big Village", "InsiderAdvantage", "Redfield & Wilton Strategies"],
-    "rel-missing":["Beacon Research/Shaw & Company Research", "The Washington Post", "Cygnal", "Noble Predictive Insights"]
+    "relmissing":["Beacon Research/Shaw & Company Research", "The Washington Post", "Cygnal", "Noble Predictive Insights"]
 }
 ]
