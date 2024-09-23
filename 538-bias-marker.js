@@ -1,4 +1,4 @@
-k// ==UserScript==
+// ==UserScript==
 // @name        538 Political Markers
 // @match       *://projects.fivethirtyeight.com/*
 // @version     1.0
