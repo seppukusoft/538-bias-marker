@@ -1,8 +1,8 @@
-// ==UserScript==
+k// ==UserScript==
 // @name        538 Political Markers
 // @match       *://projects.fivethirtyeight.com/*
 // @version     1.0
-// @author      your mom
+// @author      seppukusoft
 // @description Displays the political leaning of polls featured on 538 where not provided.
 // ==/UserScript==
 
