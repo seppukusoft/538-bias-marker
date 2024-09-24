@@ -72,7 +72,10 @@ window.onload = function() {
 
     // Fetch pollster bias data
     function addMarkers(){
-    fetch("https://raw.githubusercontent.com/seppukusoft/538-bias-marker/refs/heads/main/list.json")
+      // Remove existing markers before adding new ones
+      const existingMarkers = document.querySelectorAll('.partisan.external, .partisan.red, .partisan.blue, .partisan.leanred, .partisan.leanblue, .partisan.unreliable');
+      existingMarkers.forEach(marker => marker.remove());
+      fetch("https://raw.githubusercontent.com/seppukusoft/538-bias-marker/refs/heads/main/list.json")
         .then(res => res.json())
         .then(data => {
             let firstObject = data[0];
@@ -83,7 +86,7 @@ window.onload = function() {
             let leanBluePollsters = firstObject.leanblue;
             let unreliablePollsters = firstObject.unreliable;
             let relMissingPollsters = firstObject.relmissing;
-            
+
             let pollsterArray = document.getElementsByClassName("pollster-name");
             let sponsorArray = document.getElementsByClassName("sponsor");
 
@@ -187,8 +190,8 @@ window.onload = function() {
 
         let buttonPressed = false;
         let searchBoxActive = false;
+        let dropdownSelected = false;
 
-        // Button interaction
         const showMoreButton = document.querySelector('.more-polls');
         if (showMoreButton) {
             showMoreButton.onclick = function() {
@@ -196,7 +199,7 @@ window.onload = function() {
                 setTimeout(() => {
                     addMarkers();
                     buttonPressed = false; // Reset the flag
-                }, 5000); // Delay for 5 seconds
+                }, 1000); 
             };
         }
 
@@ -212,19 +215,56 @@ window.onload = function() {
                 if (currentTime - lastRunTime > 1500) {
                     lastRunTime = currentTime; // Update the last run time
                     setTimeout(() => {
-                        addMarkers(); 
-                    }, 1000); 
+                        addMarkers();
+                    }, 1000);
                 }
             });
         }
 
-        // Set up MutationObserver to detect changes
-        const observer = new MutationObserver((mutations) => {
-            if (buttonPressed || searchBoxActive) {
-                addMarkers(); // Call addMarkers if the button was pressed or the search box was interacted with
-            }
+
+const attachDropdownListener = () => {
+    const dropdownMenu = document.querySelector('.js-state');
+    if (dropdownMenu) {
+        dropdownMenu.addEventListener('change', () => {
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
         });
+    }
 };
 
+attachDropdownListener();
 
-// TEST TEST TEST TEST TEST TEST TEST TEST TEST 
+    // MutationObserver setup
+    const pollListContainer = document.querySelector('.polls');
+    if (pollListContainer) {
+        const observer = new MutationObserver((mutations) => {
+            if (buttonPressed || searchBoxActive || dropdownSelected) {
+                addMarkers();
+            }
+        });
+        observer.observe(pollListContainer, { childList: true, subtree: true });
+    }
+  window.addEventListener('popstate', function(event) {
+        console.log('URL changed to: ' + window.location.href);
+        addMarkers(); // Call addMarkers whenever the URL changes via browser navigation
+    });
+
+    // history.pushState and history.replaceState detection
+    (function() {
+        const originalPushState = history.pushState;
+        const originalReplaceState = history.replaceState;
+
+        history.pushState = function() {
+            originalPushState.apply(this, arguments);
+            console.log('URL changed to: ' + window.location.href);
+            addMarkers();
+        };
+
+        history.replaceState = function() {
+            originalReplaceState.apply(this, arguments);
+            console.log('URL replaced to: ' + window.location.href);
+            addMarkers();
+        };
+    })();
+};
